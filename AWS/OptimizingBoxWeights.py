@@ -18,12 +18,12 @@ def OptimizingBox(arr:array):
             SumB += item
         
         for item in arr:
-            if bTest == False:
-                arrNew.append(item)
+           # if bTest == False:
+            arrNew.append(item)
             for number in arrNew:
                 SumA+=number
             if SumA > SumB - SumA:
-                bTest = True
+                #bTest = True
                 return arrNew
             else:
                 pass
