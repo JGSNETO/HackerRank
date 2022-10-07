@@ -14,12 +14,30 @@ int** total_number_of_pages;
 
 int main()
 {
+<<<<<<< HEAD
     int total_number_of_shelves;
     scanf("%d", &total_number_of_shelves);
     
     int total_number_of_queries;
     scanf("%d", &total_number_of_queries);
     
+=======
+    
+    int total_number_of_shelves;
+    scanf("%d", &total_number_of_shelves);
+
+    total_number_of_books = calloc(total_number_of_shelves, sizeof(int));
+
+    int total_number_of_queries;
+    scanf("%d", &total_number_of_queries);
+
+    total_number_of_pages = malloc(total_number_of_shelves * sizeof(int *));
+    for (int i = 0; i < total_number_of_shelves; i++) 
+    {
+        total_number_of_pages[i] = calloc(1100, sizeof(int));
+    }
+
+>>>>>>> 4b2d108f5af21105db2248c61f0fbd5480bf10dc
     while (total_number_of_queries--) {
         int type_of_query;
         scanf("%d", &type_of_query);
@@ -28,6 +46,7 @@ int main()
             /*
              * Process the query of first type here.
              */
+<<<<<<< HEAD
             int x, y;
             scanf("%d %d", &x, &y);
             int lastShelf = *(total_number_of_books + x);
@@ -36,6 +55,17 @@ int main()
             *(total_number_of_books + x) += 1;
     
             
+=======
+            int shelf, pages;
+            scanf("%d %d", &shelf, &pages);
+            total_number_of_books[shelf]++;
+            int *book = total_number_of_pages[shelf];
+            while (*book != 0)
+                book++;
+            *book = pages;
+            
+
+>>>>>>> 4b2d108f5af21105db2248c61f0fbd5480bf10dc
         } else if (type_of_query == 2) {
             int x, y;
             scanf("%d %d", &x, &y);
