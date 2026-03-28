@@ -1,12 +1,10 @@
 read char
 
-if [ "$char" -eq "Y" || "$char" -eq "y" ]; then
+if [[ "$char" == "Y" || "$char" == "y" ]]; then
     echo "YES"
-else
+elif [[ "$char" == "N" || "$char" == "n" ]]; then
     echo "NO"
-
-# Read a single character from standard input and store it in variable 'char'
-read char
+fi
 
 # Start a case statement to match the value of 'char'
 case "$char" in
